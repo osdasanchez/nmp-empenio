@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+api:
+  version: 1.0.0
+
+logging:
+  level:
+    org.springframework.security: trace
+
+spring:
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://172.31.18.19:9000
+
+  data:
+    mongodb:
+      uri: mongodb+srv://daniel-dev:xnez64VKzlmXlXE3@danmongocluster0.frfcbir.mongodb.net/?retryWrites=true&w=majority
+      database: docdbnmp
+
+springdoc:
+  api-docs:
+    version: openapi_3_0
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  show-oauth2-endpoints: true
